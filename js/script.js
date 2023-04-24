@@ -1,25 +1,60 @@
-//recuperando o botão com o getelement
-const botao = document.getElementById("btn-1")
 
-//RECUPERANDO UM ITEM ESPECÍFICO COM A FUNÇÃO querySelector(parâmetro)
-const seletor = document.querySelector("li")
-console.log(seletor.textContent)
+//Recuperando o botão com o getElementById
+// const botao = document.getElementById("btn-1");
 
-//RECUPERAR UMA LISTA DE ELEMENTOS COM A FUNÇÃO querySelectorAll
-const seletores = document.querySelectorAll("li")
+//Recuperar um item especifico com a
+//função querySelector(parâmetro)
+// const seletor = document.querySelector("li")
+// console.log(seletor.textContent)
 
-seletores.forEach((item)=>{
-    
-    if(item.textContent == "item-3") {
-        let meuItem = item;
-        console.log (`Itens selecionados : ${item.textContent}`);
-        meuItem.textContent = "Ta Dominado!!!"
-    }
-})
+//Recuerar uma lista de elementos com a função
+//querySelecorAll
+// const seletores = document.querySelectorAll("li");
+ 
+// seletores.forEach((item)=>{
 
-//setImOut
-//SetInterval
+//     if (item.textContent == "Item-15") {
+//         let meuItem = item;
+//         console.log(`Item selecionado : ${meuItem.textContent}`);
+//         meuItem.textContent = "TÁ DOMINADO!!"   
+//     }
+// })
+
+//Para estudar
+//setTimeOut
+//setInterval
 //Random
 //Math.Ceil
 //Math.Random
-//Math.floor
+//Math.Floor
+
+let tmp = "";
+
+function mudarCor() {
+
+    let r = 0;
+    let g = 0;
+    let b = 0;
+
+    r = Math.round(Math.random() * 255);
+    g = Math.round(Math.random() * 255);
+    b = Math.round(Math.random() * 255);
+
+    const cabecalho = document.querySelector(".cabecalho");
+
+    cabecalho.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+    tmp = setTimeout(mudarCor, 5000)
+
+    const banner = document.querySelector(".banner-1")
+    banner.style.background = `rgb(${r},${g},${b})`;
+
+    const banner2 = document.querySelector(".banner-2")
+    banner2.style.background = `rgb(${r},${g},${b})`;
+
+   
+}
+
+mudarCor();
+
+
